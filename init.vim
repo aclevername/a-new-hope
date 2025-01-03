@@ -5,6 +5,7 @@ endif
 
 call plug#begin(stdpath('data') . '/plugged')
 
+Plug 'jjo/vim-cue'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -33,7 +34,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'hashivim/vim-terraform'
 Plug 'zhimsel/vim-stay'
 Plug 'liuchengxu/vista.vim'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'majutsushi/tagbar'
 Plug 'mhinz/vim-grepper'
 Plug 'arzg/vim-corvine'
@@ -181,6 +182,21 @@ augroup END
 """ vista.vim
 let g:vista_default_executive = 'ale'
 let g:vista#renderer#enable_icon = 0
+
+
+" let g:copilot_no_tab_map = v:true
+" let g:copilot_assume_mapped = v:true
+" let a:i.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+" let g:copilot_enabled = v:true
+" let g:copilot_keymap = '<C-Space>'
+" let g:copilot_keymap_accept = '<C-j>'
+" let g:copilot_filetypes = {
+"     ['markdown'] = 1,
+"     ['yaml'] = 1
+" }
+let g:copilot_filetypes = {'markdown': v:true, 'markdownx' : v:true, 'yaml': v:true}
+
 
 " Settings
 
